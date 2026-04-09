@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Architects;
+    src: url(../css/fonts/Architects_Daughter/ArchitectsDaughter-Regular.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vw;
+    min-height: 100vw; /* como se fosse 0 */
+    background-image: linear-gradient(to right, #18a2c9, #72c3bd);
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px;
+    /* border: 1px solid black; */
+    
+}
+
+.container--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-header__image-perfil{
+    width: 100px;
+    margin-top: 10px;
+    padding: 20px 25px;
+    /* 1° valor - deslocamento da sombra na orizontal */
+    /* 2° valor - deslocamento da sombra na vertical */
+    /* 3° valor - Quao forte é o bluer */
+    /* rgba - o 4° do rgba é para ver o quano opaco vai ser sendo 0 é opaco e 1 é transparente*/
+    box-shadow: 0 0 7px rgba(222, 210, 125, 0.2);
+}
+
+.form-header__title{
+    color: #cdc481;
+    font-family: Architects, sans-serif;
+}
+
+.form-header__text{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Formulario de contato */
+.form-contact{
+    padding: 20px;
+}
+
+.form-contact__linha{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* height: 60px; */
+    /* border: 1px solid yellowgreen; */
+}
+
+.form-contact__col-a{
+    width: 10%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.form-contact__col-b{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.form-contact__label{
+    color: white;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;    
+}
+
+/* Tudo que é padrão nos imputs vai ficar aqui */
+.form-contact__input{
+    padding: 5px 10px;
+    width: 100%;
+    height: 35px;
+    color: #18a2c9;
+    border: none;
+    box-shadow: 1px 1px 7px rgba(255, 255, 255, 0.3);
+    outline: none;
+    border-radius: 3px;
+    /* Faz com que as coisas demorem um serto tempo para mudar */
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.form-contact__input::placeholder{
+    color: #18a2c9;
+}
+
+/* Serve para você fazer a barra mudar de cor quando usada */
+.form-contact__input:focus{
+    background-color: #18a2c9;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.form-contact__input--metade{
+    width: 48%;
+}
+
+.form-contact__input--terso{
+    width: 28%;
+}

@@ -1,0 +1,47 @@
+*{
+    width: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+/* Desktop */
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+img{
+    width: 150px;
+    height: 100px;
+}
+
+/* Impede da imagem aparecer em outras telas sem ser a de Desktop */
+/* @media screen and (max-width: 991px) {
+    img{
+        width: 0;
+        height: 0;
+    }
+} */
+
+/* Breakpoints | Ponto de quebra de layout */
+/* Tablet < 992px(768px até 991px)*/
+@media screen and (max-width: 991px){
+    h1{
+        color: green;
+    }
+    /* .icone é uma classe da imagem que, nesse caso, impede a imagem de aparecer */
+    .icone{
+        display: none;
+    }
+}
+
+/* Smatphone < 768px(0px até 767)*/
+@media screen and (max-width: 767px){
+    h1{
+        color: blueviolet;
+        background-color: aqua;
+    }
+    .icone{
+        display: block;
+    }
+}
