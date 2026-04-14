@@ -11,10 +11,11 @@
 
 body{
     width: 100vw;
-    height: 100vw;
+    height: 100%;
     min-height: 100vw; /* como se fosse 0 */
     background-image: linear-gradient(to right, #18a2c9, #72c3bd);
     background-repeat: no-repeat;
+    padding: 0% 10%;
 }
 
 .container{
@@ -22,7 +23,6 @@ body{
     max-width: 1200px;
     margin: 0px;
     /* border: 1px solid black; */
-    
 }
 
 .container--flex{
@@ -35,7 +35,7 @@ body{
 .form-header__image-perfil{
     width: 100px;
     margin-top: 10px;
-    padding: 20px 25px;
+    padding: 10px 15px;
     /* 1° valor - deslocamento da sombra na orizontal */
     /* 2° valor - deslocamento da sombra na vertical */
     /* 3° valor - Quao forte é o bluer */
@@ -54,7 +54,7 @@ body{
 
 /* Formulario de contato */
 .form-contact{
-    padding: 20px;
+    padding: 5px 20px;
 }
 
 .form-contact__linha{
@@ -63,6 +63,35 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-right: 20px;
+    /* height: 60px; */
+    /* border: 1px solid yellowgreen; */
+}
+
+.form-contact__linha--descrição{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 20px;
+    /* height: 60px; */
+    /* border: 1px solid yellowgreen; */
+}
+
+.form-contact__linha-endereço2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 1%;
+    /* height: 60px; */
+    /* border: 1px solid yellowgreen; */
+}
+
+.form-contact__linha--Endereço{
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+    padding-right: 20px;
     /* height: 60px; */
     /* border: 1px solid yellowgreen; */
 }
@@ -97,6 +126,7 @@ body{
     box-shadow: 1px 1px 7px rgba(255, 255, 255, 0.3);
     outline: none;
     border-radius: 3px;
+    padding-right: 20px;
     /* Faz com que as coisas demorem um serto tempo para mudar */
     transition: background-color 0.4s, color 0.4s;
 }
@@ -117,5 +147,90 @@ body{
 }
 
 .form-contact__input--terso{
-    width: 28%;
+    width: 31%;
+}
+
+.form-contact__input--quarto{
+    width: 23%;
+}
+.form-contact__input--descrição{
+    width: 100%;
+    height: 200px;
+    align-items: normal;
+}
+
+.Endereço{
+        flex-direction: column;
+}
+
+.botão{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    justify-content: space-evenly;
+}
+
+button{
+    background-color: transparent;
+    border-radius: 4px;
+    height: 90%;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.4s, color 0.4s;
+    cursor: pointer;
+}
+
+/* O hover permite você só passar o mouse em ima pra mudar a cor, diferente do placehouder e focus */
+button:hover{
+    cursor: pointer;
+    background-color: #18a2c9;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+
+
+
+/* MALDITA RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    .form-contact__label{
+        color: transparent;
+    }
+
+    .form-contact__col-b{
+        flex-direction: column;
+    }
+
+    .form-contact__input--metade {
+        display: flex;
+        margin: 2% 0%;
+        width: 90%;
+    }
+    .form-contact__input--terso {
+        display: flex;
+        margin: 2% 0%;
+        width: 90%;
+    }
+    .form-contact__input--quarto {
+        display: flex;
+        margin: 2% 0%;
+        width: 90%;
+    }
+    .form-contact__input--descrição {
+        display: flex;
+        margin: 2% 0%;
+        width: 90%;
+    }
+
+    .form-contact__input{
+        width: 90%;
+    }
+    
+    .form-contact__linha-endereço2{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        flex-direction: column;
+    }
 }
