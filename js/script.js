@@ -30,7 +30,7 @@ async function buscarEndereco(cep){
         alert("O CEP tem que ter 8 digitos");
         // // faz com que nenhuma função abaixo dela funcione
         // return false;
-
+    }
         //buscar o CEP lá na ViaCEP
         try{
             aguardandoCampo()
@@ -53,7 +53,6 @@ async function buscarEndereco(cep){
         } catch (error){
             console.log(error)
         }
-    }
 }
 
 function aguardandoCampo(){
@@ -66,20 +65,20 @@ function aguardandoCampo(){
 }
 
 function validarFormulario(){
-     let nome = document.getElementById("nome").value;
-     let sobrenome = document.getElementById("sobrenome").value;
+    let nome = document.getElementById("nome").value;
+    let sobrenome = document.getElementById("sobrenome").value;
     let email = document.getElementById("email").value;
-     let pais = document.getElementById("pais").value;
-     let ddd = document.getElementById("ddd").value;
-     let numero = document.getElementById("numero").value;
-     let cep = document.getElementById("cep").value;
-     let logradouro = document.getElementById("logradouro").value;
-     let regiao = document.getElementById("regiao").value;
-      let complemento = document.getElementById("complemento").value;
-     let bairro = document.getElementById("bairro").value;
-     let cidade = document.getElementById("cidade").value;
-     let estado = document.getElementById("estado").value;
-     let anotação = document.getElementById("anotação").value;
+    let pais = document.getElementById("pais").value;
+    let ddd = document.getElementById("ddd").value;
+    let numero = document.getElementById("numero").value;
+    let cep = document.getElementById("cep").value;
+    let logradouro = document.getElementById("logradouro").value;
+    let regiao = document.getElementById("regiao").value;
+    // let complemento = document.getElementById("complemento").value;
+    let bairro = document.getElementById("bairro").value;
+    let cidade = document.getElementById("cidade").value;
+    let estado = document.getElementById("estado").value;
+    let anotação = document.getElementById("anotação").value;
     let quantidadeErros = 0;
 
     if(nome.trim().length == 0){
@@ -87,87 +86,87 @@ function validarFormulario(){
         quantidadeErros++;
         // alert("O campo nome é obrigatorio");
     }else{
-        reiciaBorda("nome")
+        reiniciaBorda("nome")
     }
 
     if(sobrenome.trim().length == 0){
         formError("sobrenome");
         quantidadeErros++;
     }else{
-        reiciaBorda("sobrenome")
+        reiniciaBorda("sobrenome")
     }
 
     if(email.trim().length == 0){
         formError("email");
         quantidadeErros++;
     }else{
-        reiciaBorda("email")
+        reiniciaBorda("email")
     }
     if(pais.trim().length == 0){
         formError("pais");
         quantidadeErros++;
     }else{
-        reiciaBorda("pais")
+        reiniciaBorda("pais")
     }
     if(ddd.trim().length == 0){
         formError("ddd");
         quantidadeErros++;
     }else{
-        reiciaBorda("ddd")
+        reiniciaBorda("ddd")
     }
     if(numero.trim().length == 0){
         formError("numero");
         quantidadeErros++;
     }else{
-        reiciaBorda("numero")
+        reiniciaBorda("numero")
     }
     if(cep.trim().length == 0){
         formError("cep");
         quantidadeErros++;
     }else{
-        reiciaBorda("cep")
+        reiniciaBorda("cep")
     }
     if(logradouro.trim().length == 0){
         formError("logradouro");
         quantidadeErros++;
     }else{
-        reiciaBorda("logradouro")
+        reiniciaBorda("logradouro")
     }
     if(regiao.trim().length == 0){
         formError("regiao");
         quantidadeErros++;
     }else{
-        reiciaBorda("regiao")
+        reiniciaBorda("regiao")
     }
-    if(complemento.trim().length == 0){
-        formError("complemento");
-        quantidadeErros++;
-    }else{
-        reiciaBorda("complemento")
-    }
+    // if(complemento.trim().length == 0){
+    //     formError("complemento");
+    //     quantidadeErros++;
+    // }else{
+    //     reiniciaBorda("complemento")
+    // }
     if(bairro.trim().length == 0){
         formError("bairro");
         quantidadeErros++;
     }else{
-        reiciaBorda("bairro")
+        reiniciaBorda("bairro")
     }
     if(cidade.trim().length == 0){
         formError("cidade");
         quantidadeErros++;
     }else{
-        reiciaBorda("cidade")
+        reiniciaBorda("cidade")
     }
     if(estado.trim().length == 0){
         formError("estado");
         quantidadeErros++;
     }else{
-        reiciaBorda("estado")
+        reiniciaBorda("estado")
     }
     if(anotação.trim().length == 0){
         formError("anotação");
         quantidadeErros++;
     }else{
-        reiciaBorda("anotaçãos")
+        reiniciaBorda("anotaçãos")
     }
 
     if(quantidadeErros > 0){
@@ -185,15 +184,15 @@ function validarFormulario(){
             numero: numero,
             cep: cep,
             logradouro: logradouro,
-            regiao: rigiao,
-            complemento: complemento,
+            regiao: regiao,
+            // complemento: complemento,
             bairro: bairro,
             cidade: cidade,
             estado: estado,
             anotação: anotação
         }
 
-        // alert("Formulario enviado com sucesso")
+        alert("Formulario enviado com sucesso")
         let cadastrar = cadastrarContato(objetoContato)
         // reiniciaTodasAsBordas();
     }
@@ -204,7 +203,7 @@ function formError(idCampo){
     document.getElementById(idCampo).style.border="2px solid red";
 }
 
-function reiciaBorda(idCampo){
+function reiniciaBorda(idCampo){
     document.getElementById(idCampo).style.border = "2px solid transparent";
 }
 
