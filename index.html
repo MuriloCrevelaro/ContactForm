@@ -55,9 +55,9 @@
                     </div>
                   
                         <div class="form-contact__linha-endereço2">
-                            <input class="form-contact__input form-contact__input--quarto" type="text" name="endereço" id="cep" placeholder="cep:9999-999">
-                            <input class="form-contact__input form-contact__input--metade" type="text" name="endereço" id="Rua" placeholder="Rua Lá de Casa">
-                            <input class="form-contact__input form-contact__input--quarto" type="text" name="endereço" id="numero__casa" placeholder="EX: 555">
+                            <input onblur="buscarEndereco(this.value);" class="form-contact__input form-contact__input--quarto" type="text" name="endereço" id="cep" placeholder="cep:9999-999">
+                            <input class="form-contact__input form-contact__input--metade" type="text" name="endereço" id="logradouro" placeholder="logradouro Lá de Casa">
+                            <input class="form-contact__input form-contact__input--quarto" type="text" name="endereço" id="regiao" placeholder="EX: 555">
                         </div>                    
                 </div>
                 <div class="form-contact__linha--Endereço">
@@ -65,7 +65,7 @@
                         <label class="form-contact__label" for="endereço"></label>
                     </div>
                         <div class="form-contact__linha-endereço2">
-                            <input class="form-contact__input form-contact__input--terso" type="text" name="endereço" id="bloco" placeholder="Apto. 12 BlocoX">
+                            <input class="form-contact__input form-contact__input--terso" type="text" name="endereço" id="complemento" placeholder="complemento">
                             <input class="form-contact__input form-contact__input--terso" type="text" name="endereço" id="bairro" placeholder="Bairro">
                             <input class="form-contact__input form-contact__input--terso" type="text" name="endereço" id="cidade" placeholder="Cidade">
                         </div>
@@ -91,10 +91,10 @@
             </form>
         </div>
         <div class="botão">
-            <button onclick="validarFormulario()">
+            <button onclick="validarFormulario()" type="button">
                 Cadastrar
             </button>
-            <button>
+            <button onclick="reiniciaTodasAsBarras()">
                 Limpar
             </button>
         </div>

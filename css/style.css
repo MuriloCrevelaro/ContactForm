@@ -178,7 +178,6 @@ button{
     width: 30%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     transition: background-color 0.4s, color 0.4s;
-    cursor: pointer;
 }
 
 /* O hover permite você só passar o mouse em ima pra mudar a cor, diferente do placehouder e focus */
